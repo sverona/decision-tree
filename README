@@ -1,0 +1,18 @@
+The .jar is located at
+
+target/decision-tree-1.0-SNAPSHOT.jar
+
+The code can be recompiled using Maven:
+(in this directory)
+$ mvn package
+
+The .jar takes a single argument: the input ARFF file.
+The type of decision tree and/or the entropy threshold need to be modified by hand (in the Trainer class.) This really should have been handled at the command line. I apologize for this oversight.
+
+Issues:
+- The randomized tree tends to be trivial for binary problems with unbalanced classes. This is the intended behavior, though.
+- Inconsistent data (where all predictive attributes are the same, but the class labels differ) is not handled well. Try running the entropy tree on solar.flare2.arff with a threshold below 0.3. I thought I fixed this, but apparently not.
+- Assorted other things (redundant class fields, etc.) that arose because I don't know how to design a program of this size in a halfway decent way.
+
+Things left undone:
+- Splitting criteria for numeric values are implemented in the IntervalCriterion class, but I didn't have time to implement entropy minimization for such criteria.

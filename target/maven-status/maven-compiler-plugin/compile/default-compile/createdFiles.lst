@@ -1,0 +1,8 @@
+decisionTree/DecisionTreeNode.class
+decisionTree/Criterion.class
+decisionTree/IntervalCriterion.class
+decisionTree/PointCriterion.class
+decisionTree/Trainer.class
+decisionTree/EntropyDecisionTree.class
+decisionTree/DecisionTree.class
+decisionTree/RandomizedDecisionTree.class
